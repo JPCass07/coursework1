@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+// comments so gitlab recognizes file change
 public class SevenSegment {
     // array of ASCII art for digits 0–9
     private static String[][] DIGITS = {
