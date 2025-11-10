@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class SevenSegment {
-    // ASCII art for digits 0–9
+    // array of ASCII art for digits 0–9
     private static String[][] DIGITS = {
-        { " _",
+        { " _ ",
           "| |",
           "|_|" }, // 0
         { "   ",
@@ -37,18 +37,22 @@ public class SevenSegment {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.print("Enter a non-negative integer: ");
+        System.out.print("Enter a non-negative integer: ");// int input
         int number = in.nextInt();
         in.close();
 
-        String numStr = Integer.toString(number);
+        String n = Integer.toString(number);
+        
+        displayint(n);
+    }
 
+    static void displayint(String n) {
         // Build the three display rows
         StringBuilder row1 = new StringBuilder();
         StringBuilder row2 = new StringBuilder();
         StringBuilder row3 = new StringBuilder();
 
-        for (char c : numStr.toCharArray()) {
+        for (char c : n.toCharArray()) { //for char in char array(str) convert then parse from string array
             int d = c - '0';
             row1.append(DIGITS[d][0]).append(' ');
             row2.append(DIGITS[d][1]).append(' ');
